@@ -64,7 +64,7 @@ input_features = {
 input_df = pd.DataFrame([input_features])
 
 with st.container():
-    st.write("")  # Adding an empty line for spacing
+    st.write("")  
     if st.button("Predict Churn"):
         pred = model['model'].predict_proba(input_df[model['features']])[:, 1]
         prediction = float(pred) * 100
