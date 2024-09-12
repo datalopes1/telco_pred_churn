@@ -53,6 +53,9 @@ Os dados podem ser encontrados no [Kaggle](https://www.kaggle.com/datasets/blast
 - Acurácia, F1 Score, ROC AUC e MCC.
 
 ## Resultados
+### Aplicativo Streamlit
+Além das análises, e construção do modelo de Machine Learning foi criado um aplicativo web com o [Streamlit](https://telcochurn-predictor.streamlit.app/).
+
 ### Conclusões da Análise Exploratória
 - Clientes com menor tempo de relacionamento com a Telco tem maior probabilidade de Churn, são necessárias ações para aumentar a fidelização de clientes novos, especialmente no recorte dos primeiros 18 meses;
 - Pessoas em planos com mensalidade maior tem maior probabilidade de Churn, é necessário checar o atendimento nestes planos e revisar os preços;
@@ -78,7 +81,7 @@ Os dados podem ser encontrados no [Kaggle](https://www.kaggle.com/datasets/blast
 ![cmatrix](doc/img/plot/cf.png)
 
 ## Ferramentas utilizadas
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)![Jupyter Notebook](https://img.shields.io/badge/jupyter-%23FA0F00.svg?style=for-the-badge&logo=jupyter&logoColor=white)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)![Jupyter Notebook](https://img.shields.io/badge/jupyter-%23FA0F00.svg?style=for-the-badge&logo=jupyter&logoColor=white)![Streamlit Badge](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&logoColor=fff&style=for-the-badge)
 
 ## Contatos
 - **E-mail:** andreluizlcons@gmail.com
