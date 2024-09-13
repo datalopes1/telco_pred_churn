@@ -9,7 +9,8 @@ def load_base_data(data_path):
     data = pd.read_csv(data_path)
     return data
 
-st.title("TELCO CHURN PREDICTOR ☎️")
+st.title("Preditor de Churn Telco Telecom")
+st.markdown("### Ajuste as informações na barra lateral e faça sua predição")
 
 model_path = "models/classifier.pkl"
 data_path = "data/raw/WA_Fn-UseC_-Telco-Customer-Churn.csv"
@@ -38,6 +39,11 @@ monthly = st.sidebar.slider("MonthlyCharges", data["MonthlyCharges"].min(), data
 total = st.sidebar.slider("Total Charges", data['MonthlyCharges'].min(), 9000.0)
 tenure = st.sidebar.slider("Tenure", data['tenure'].min(), data['tenure'].max())
 
+st.sidebar.header("Links")
+st.sidebar.markdown("**Repositório Original**: [Github](https://github.com/datalopes1/telco_pred_churn)")
+st.sidebar.markdown("**LinkedIn**: [LinkedIn](https://www.linkedin.com/in/andreluizls1/)")
+st.sidebar.markdown("**E-mail:** andreluizlcons@gmail.com")
+
 input_features = {
     'gender': gender,
     'SeniorCitizen': senior,
@@ -65,11 +71,13 @@ input_df = pd.DataFrame([input_features])
 
 with st.container():
     st.write("")  
+    
     if st.button("Predict Churn"):
         pred = model['model'].predict_proba(input_df[model['features']])[:, 1]
         prediction = float(pred) * 100
 
-        st.write(f"A probabilidade de churn para este cliente é: {prediction:.2f}%")
+        st.markdown("### Resultado")
+        st.write(f"A probabilidade de churn para este cliente é: **:red[{prediction:.2f}%]**")
 
         if pred > 0.60:
             st.write("De acordo com nosso limiar de decisão, este cliente seria caso de Churn")
